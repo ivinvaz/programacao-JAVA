@@ -1,0 +1,59 @@
+-------Estrutura básica de código-------
+public class nomedoarquvio {
+    public static void main(String[] args) {
+    }
+}
+public = pode ser acessado de qualquer lugar do código.
+class = inicia uma classe
+static = indica que o "main" pertence à "nomedoarquvio".
+void = indica que "main" não retorna nada ao ser executado.
+main = nome do método.
+(String[] args) = Indica os argumentos recebidos pelo método "main", no caso uma string que pode ser referênciada por args dentro do método.
+
+-------Estruta de input/print-------
+import java.util.Scanner; //import input
+public class nomedoarquvio {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in); //iniciando input
+        System.out.println("Escreva um número: "); //print
+        int numero = input.nextInt(); // input
+        input.close(); // fechando input
+        System.out.println(mumero); //print
+    }
+}
+
+-------Estruta de tipagem de dados-------
+public class nomedoarquvio {
+    public static void main(String[] args) {
+        String a = "a";
+        int x = 1;
+        boolean z = false;
+        float y = 1.34;
+    }
+}
+
+-------Estruta de lógica-------
+public class nomedoarquvio {
+    public static void main(String[] args) {
+        if (condição) {
+
+        } else if (condição){
+
+        } else {
+
+        };
+
+        switch (item) {
+            case "teste":
+                break;
+        };
+
+        while (condição) {
+
+        };
+
+        for (inicialização ; argumento ; complemento) {
+
+        };
+    }
+}
