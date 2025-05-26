@@ -1,0 +1,70 @@
+-------Classes abstratas e interface-------
+Classe abstratas é uma classe que não pode ser instanciada diretamente. 
+Ela serve como um modelo ou um contrato para suas subclasses.
+
+Interface define um contrato que as classes podem implementar. 
+Ela especifica um conjunto de métodos que uma classe deve fornecer se ela "implementa" essa interface.
+
+-------Estruta de OOP extend-------
+A classe animal é a classe pai enquanto a classe cachorro a classe filha, todos os métodos da pai são passados para a filha, podendo ser sobrescritos com @override
+class Animal {
+        private String nome;
+        public Animal(String nome) {
+            this.nome = nome;
+        }
+        public void emitirSom() {
+            System.out.println("Som genérico de animal");
+        }
+    }
+class Cachorro extends Animal {
+        public Cachorro(String nome) {
+            super(nome);
+        }
+        @Override
+        public void emitirSom() {
+        System.out.println("Au au!");
+    }
+}
+
+-------Estruta de polimorfismo-------
+O JDK tomará a decisão de qual método somar utilizar com base nos parâmetros recebidos.
+public class C2 {
+    class Calculadora {
+        public int somar(int a, int b) {
+            return a + b;
+        }
+
+        public double somar(double a, double b) {
+            return a + b;
+        }
+
+        public int somar(int a, int b, int c) {
+            return a + b + c;
+        }
+    }
+}
+
+-------Estruta de OOP implement-------
+public abstract class FormaGeometrica {
+    private String cor;
+    public FormaGeometrica(String cor) {
+        this.cor = cor;
+    }
+    public interface Imprimivel {
+    void imprimir();
+    }
+}
+public class Carro implements Imprimivel {
+    private String modelo;
+    
+    public Carro(String modelo) {
+        this.modelo = modelo;
+    }
+    @Override
+    public void imprimir() {
+        System.out.println("Carro: Modelo = " + modelo);
+    }
+}
+
+-------OBS-------
+Métodos extend e implement podem ser utilizados ao mesmo tempo

@@ -1,0 +1,20 @@
+-------Estruta de OOP-------
+String parametro1;
+int parametro2;
+String parametroExtra;
+public Classe(String parametro1, int parametro2) {
+            parametro1 = nomeInicial;
+            parametro2 = idadeInicial;
+            this.parametroExtra = "Não especificada";
+}
+public static void main(String[] args) {
+            Classe pessoa1 = new Classe("parametro1", parametro2);
+}
+
+-------Estruta de encapsulamento-------
+public = é acessado de qualque lugar do código
+private = é acessado apenas dentro da própria classe
+protected = é acessado apenas dentro do mesmo pacote
+
+getter = método de acesso que retorna atributos private de uma classe
+setter = método de acesso que modifica atributos private de uma classe
