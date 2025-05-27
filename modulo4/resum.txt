@@ -1,0 +1,60 @@
+-------Estrutura de Array-------
+import java.util.ArrayList;
+import java.util.List;
+
+List<String> novaLista = new ArrayList<>();
+
+add(E elemento): Adiciona o elemento especificado ao final da lista.
+add(int index, E elemento): Insere o elemento especificado na posição especificada na lista.
+remove(Object o): Remove a primeira ocorrência do elemento especificado da lista, se estiver presente. Retorna true se a lista foi modificada, false caso contrário.
+remove(int index): Remove o elemento na posição especificada na lista. Retorna o elemento que foi removido.
+get(int index): Retorna o elemento na posição especificada na lista.
+size(): Retorna o número de elementos na lista.
+contains(Object o): Retorna true se a lista contém o elemento especificado.
+indexOf(Object o): Retorna o índice da primeira ocorrência do elemento especificado na lista, ou -1 se a lista não contém o elemento.
+isEmpty(): Retorna true se a lista não contém elementos.
+clear(): Remove todos os elementos da lista.
+set(int index, E elemento): Substitui o elemento na posição especificada pelo elemento especificado. Retorna o elemento que foi substituído.
+
+-------Estrutura de Map/Set/Hash/TreeSet-------
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
+Set<Integer> hashSetDeInteiros = new HashSet<>(); //Não mantém ordem
+Set<Integer> treeSetDeInteiros = new TreeSet<>(); //Mantém ordem
+Map<String, Double> mapaDePrecos = new HashMap<>(); //Praticamente um dicionário, contudo, sem ordem
+
+put(chave, valor): Associa o valor à chave neste mapa. Se o mapa já continha uma chave igual, o valor antigo é substituído pelo novo valor. Retorna o valor anterior associado à chave, ou null se não havia nenhuma associação para a chave.
+get(chave): Retorna o valor ao qual a chave é mapeada ou null se o mapa não contiver uma chave com esse nome.
+remove(chave): Remove a entrada para a chave especificada deste mapa, se presente. Retorna o valor que foi associado à chave ou null se o mapa não continha a chave.
+containsKey(chave): Retorna true se o mapa contiver uma chave com o nome especificado.
+containsValue(valor): Retorna true se o mapa mapear uma ou mais chaves para o valor especificado.
+keySet(): Retorna um Set contendo todas as chaves do mapa.
+values(): Retorna uma Collection contendo todos os valores do mapa.
+entrySet(): Retorna um Set contendo todas as entradas (pares chave-valor) do mapa. Cada entrada é um objeto do tipo Map.Entry.
+
+-------Estrutura de Iteradores-------
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+hasNext(): Retorna true se houver mais elementos a serem percorridos e false caso contrário.
+next(): Retorna o próximo elemento na iteração. É importante chamar hasNext() antes de next() para evitar NoSuchElementException.
+remove() (opcional): Remove o último elemento retornado por next() da coleção subjacente. Nem todas as implementações de Iterator suportam este método.
+hasPrevious(): Retorna true se houver elementos anteriores na lista.
+previous(): Retorna o elemento anterior na lista.
+nextIndex(): Retorna o índice do próximo elemento a ser retornado por next().
+previousIndex(): Retorna o índice do elemento anterior a ser retornado por previous().
+add(E e): Insere o elemento especificado na lista na posição atual do iterador.
+set(E e): Substitui o último elemento retornado por next() ou previous() pelo elemento especificado.
+
+For loop que percorre toda uma lista:
+for ((tipo de dado dos itens) item : lista) {
+}
+
+While que teste se existe um item após e retorna true para sim e false para não
+while (iterator.hasNext()) {
+}
